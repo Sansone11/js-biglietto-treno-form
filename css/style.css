@@ -28,6 +28,12 @@
     
 }
 
+.col__wrapper{
+    min-height: 200px;
+    border-radius:20px ;
+    background-color: white;
+}
+
 button>a{
     text-decoration: none;
     color: black;
@@ -48,6 +54,8 @@ h2{
     padding: 2rem;
     display: flex;
     flex-direction: row;
+    border-radius: 20px;
+    width: 100%;
 }
 
 .data__content{
@@ -59,8 +67,10 @@ h2{
 .data__price{
     flex-basis: 70%;
     background-color: white;
+    border: solid 1px black;
 }
 
 h3{
-    display: block;
+    display: inline-block;
+    margin-left: 3rem;
 }

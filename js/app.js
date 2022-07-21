@@ -23,5 +23,5 @@ document.getElementById('invia').addEventListener('click',function(){
     }else if (eta < 65){
         result = result - (result * 0.4);
     }
-    result = parseFloat(result.toFixed(2));
+    result =result.toFixed(2);
 })

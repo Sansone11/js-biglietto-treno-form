@@ -14,8 +14,8 @@ const SCONTO_PERCENTUALE_MINORENNI = 0.2;
 const SCONTO_PERCENTUALE_ANZIANI = 0.4; 
 document.getElementById('invia').addEventListener('click',function(){
     let username = document.getElementById('username').value;
-    let distanza = document.getElementById('distanza').value;
-    let eta =document.getElementById('eta').value;
+    let distanza = parseInt(document.getElementById('distanza').value);
+    let eta = parseInt (document.getElementById('eta').value);
     let result = distanza * PREZZO_AL_CHILOMETRO;
     
     if(eta > 18){
@@ -23,5 +23,6 @@ document.getElementById('invia').addEventListener('click',function(){
     }else if (eta < 65){
         result = result - (result * 0.4);
     }
-    result =result.toFixed(2);
+    result = result.toFixed(2);
+    const price = document.getElementById('prezzo'); price.innerHTML = "il prezzo del suo biglietto è di.. " + result + "€";
 })

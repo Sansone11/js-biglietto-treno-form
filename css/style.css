@@ -1,15 +1,19 @@
+/* regolr di reset */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 5px;
     border: solid 1 px black;
 }
+/* variabili */
 
 :root{
     --bg-data:#808080;
     --bg-write:#B91450;
     --bg-button:#CCCCCC;
 }
+
+/* stile-wrapper */
  
 .container__wrapper{
     background-color:var(--bg-write);
@@ -34,22 +38,6 @@
     background-color: white;
 }
 
-button>a{
-    text-decoration: none;
-    color: black;
-}
-
-input{
-    height: 30px;
-    max-width: 250px;
-    text-align: center;
-}
-
-h2{
-    text-align: center;
-    color: white;
-}
-
 .col__data{
     padding: 2rem;
     display: flex;
@@ -62,15 +50,42 @@ h2{
     flex-basis: 30%;
     background-color: var(--bg-data);
     min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-write);
 }
 
 .data__price{
     flex-basis: 70%;
     background-color: white;
     border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: var(--bg-write);
 }
 
-h3{
-    display: inline-block;
-    margin-left: 3rem;
+/* stile tasti */
+
+button>a{
+    text-decoration: none;
+    color: black;
+    color: var(--bg-write);
 }
+
+input{
+    height: 30px;
+    max-width: 250px;
+    text-align: center;
+    
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+

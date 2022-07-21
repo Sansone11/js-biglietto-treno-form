@@ -12,8 +12,16 @@
 const PREZZO_AL_CHILOMETRO = 0.21;
 const SCONTO_PERCENTUALE_MINORENNI = 0.2;
 const SCONTO_PERCENTUALE_ANZIANI = 0.4; 
-let username = parseInt(nome);
-let distanza = parseInt(km);
-let eta =parseInt (eta) ;
-let result = distanza * PREZZO_AL_CHILOMETRO;
-addEventListener('click', value(username, distanza, eta))
+document.getElementById('invia').addEventListener('click',function(){
+    let username = document.getElementById('username').value;
+    let distanza = document.getElementById('distanza').value;
+    let eta =document.getElementById('eta').value;
+    let result = distanza * PREZZO_AL_CHILOMETRO;
+    
+    if(eta > 18){
+        result = result - (result * 0.2);
+    }else if (eta < 65){
+        result = result - (result * 0.4);
+    }
+    result = parseFloat(result.toFixed(2));
+})
